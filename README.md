@@ -1,0 +1,6 @@
+The basic application has been created
+openai api key =
+"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"
+
+
+New Key="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"

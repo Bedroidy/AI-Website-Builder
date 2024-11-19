@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Photography - {{ user_name }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>{{ user_name }}'s Photography</h2>
+        <p>{{ bio }}</p>
+
+        <h3>Photos:</h3>
+        <div class="row">
+            {% for photo in photos %}
+                <div class="col-md-4">
+                    <img src="{{ photo.url }}" alt="{{ photo.title }}" class="img-fluid">
+                    <h5>{{ photo.title }}</h5>
+                    <p>{{ photo.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

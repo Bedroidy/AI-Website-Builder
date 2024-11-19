@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio - {{ user_name }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>{{ user_name }}'s Portfolio</h2>
+        <p>{{ bio }}</p>
+
+        <h3>Projects:</h3>
+        <ul>
+            {% for project in projects %}
+                <li>
+                    <strong>{{ project.title }}</strong>
+                    <p>{{ project.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
